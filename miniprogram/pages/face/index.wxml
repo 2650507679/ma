@@ -1,0 +1,10 @@
+<!--pages/page1/page1.wxml-->
+<view class="container">
+      <vant-uploader catch:delete="delete" file-list="{{ faceListAdd }}" deletable="{{ true }}" bind:after-read="afterRead" data-type="faceListAdd" max-count="1" />
+      <vant-button type="primary" bindtap="addFace">新增人脸</vant-button>
+</view>
+
+<view class="container">
+      <vant-uploader catch:delete="delete" file-list="{{ faceListSearch }}" deletable="{{ true }}" bind:after-read="afterRead" data-type="faceListSearch" max-count="1" />
+      <vant-button type="primary" bindtap="SearchFace">人脸识别</vant-button>
+</view>

@@ -1,0 +1,3 @@
+<!--pages/other/index.wxml-->
+<!-- <text>开发中...</text> -->
+<button type="primary" open-type="contact">客服</button>

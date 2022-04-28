@@ -1,0 +1,21 @@
+.container{
+  height: 200rpx;
+  background-color: rgb(221, 189, 189);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.textBox{
+  background-color: rgb(236, 157, 230); 
+}
+.van-card{
+  height:280rpx;
+  background-color: #e7ebf5 !important;
+}
+.van-card__price-integer{
+  color: black;
+}
+.van-card__desc{
+  height: 120rpx;
+}

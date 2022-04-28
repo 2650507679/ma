@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/face/index",
+    "pages/other/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "一间小破屋Anything",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "vant-button": "@vant/weapp/button/index",
+    "vant-uploader": "@vant/weapp/uploader/index",
+    "vant-card": "@vant/weapp/card/index"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1ABB9A",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "图片识别",
+        "iconPath": "images/fz.png",
+        "selectedIconPath": "images/fzBlue.png"
+      },
+      {
+        "pagePath": "pages/face/index",
+        "text": "人脸识别",
+        "iconPath": "images/searchFace.png",
+        "selectedIconPath": "images/searchFaceBlue.png"
+      },
+      {
+        "pagePath": "pages/other/index",
+        "text": "其他",
+        "iconPath": "images/fun.png",
+        "selectedIconPath": "images/funBlue.png"
+      }
+    ]
+  }
+}

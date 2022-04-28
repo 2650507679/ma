@@ -1,0 +1,9 @@
+/* pages/page1/page1.wxss */
+.container{
+  height: 200rpx;
+  background-color: rgb(221, 189, 189);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}

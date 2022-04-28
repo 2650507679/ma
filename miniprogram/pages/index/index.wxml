@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+      <vant-uploader catch:delete="delete" file-list="{{ wineList }}" deletable="{{ true }}" bind:after-read="afterRead" data-type="wineList" max-count="1" />
+      <vant-button type="primary" data-type="wineList" bindtap="yes">红酒识别</vant-button>
+</view>
+<view wx:if="{{result['wineList'].hasdetail}}" class="textBox">
+<vant-card
+  currency=""
+  price="产自:{{result['wineList'].countryCn}}\n酒类型:{{result['wineList'].classifyByColor}}"
+  desc="{{result['wineList'].description}}"
+  title="{{result['wineList'].wineNameEn}}"
+  thumb="{{ wineList[0].url }}"
+>
+</vant-card>
+</view>
+
+<view class="container">
+      <vant-uploader catch:delete="delete" file-list="{{ moneyList }}" deletable="{{ true }}" bind:after-read="afterRead" data-type="moneyList" max-count="1" />
+      <vant-button type="primary" data-type="moneyList" bindtap="yes">货币识别</vant-button>
+</view>
+<view wx:if="{{result['moneyList'].hasdetail}}" class="textBox">
+<vant-card
+  currency=""
+  price="货币代码:{{result['moneyList'].currencyCode}}\n货币年份:{{result['moneyList'].year}}"
+  desc="货币面值:{{result['moneyList'].currencyDenomination}}{{result['moneyList'].currencyName}}"
+  title="{{result['moneyList'].currencyName}}"
+  thumb="{{ moneyList[0].url }}"
+>
+</vant-card>
+</view>
+<!-- <div class="margin-xs padding-xs radius bg-white">
+  <ad unit-id="adunit-91f767d951338851" class="radius"></ad>
+</div> -->
