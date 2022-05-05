@@ -1,0 +1,34 @@
+{
+  "name": "mage",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve --open --port 8888",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "base64-js": "^1.5.1",
+    "core-js": "^3.6.5",
+    "echarts": "^5.0.2",
+    "element-ui": "^2.15.1",
+    "iview": "^3.5.4",
+    "vue": "^2.6.11",
+    "vue-echarts": "5.0.0-beta.0",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "hot-hash-webpack-plugin": "^1.0.2",
+    "image-webpack-loader": "^7.0.1",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
