@@ -1,6 +1,7 @@
 const Config = require('webpack-chain');
+const pxtorem = require('postcss-pxtorem')
 module.exports = {
-  publicPath: './',  // 输出文件目录
+  publicPath: '/',  // 输出文件目录
   outputDir: 'dist',
   lintOnSave: true,// eslint-loader 是否在保存的时候检查
   // use the full build with in-browser compiler?
@@ -31,7 +32,21 @@ module.exports = {
    // 开启 CSS source maps?
    sourceMap: false,
    // css预设器配置项
-   loaderOptions: {},
+   loaderOptions: {
+    postcss: {
+      plugins: [
+        pxtorem({
+          rootValue: 192,	// 根据设计图的尺寸来，我的是1920px
+          propList: ['*'],
+          "selectorBlackList": ["van-"],   //排除vant框架相关组件
+        })
+      ]
+    },
+    less: {
+      autoprefixer: {},
+      javascriptEnabled: true
+    },
+   },
    // 启用 CSS modules for all css / pre-processor files.
    modules: false
   },

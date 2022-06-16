@@ -1,14 +1,14 @@
 <template>
     <div id="tabBox">
         <el-tag
-        :key="item.entity.id"
+        :key="item.id"
         v-for="item in $store.state.tabArray"
-        :closable="item.entity.name!=='aa'"
+        :closable="item.name!=='aa'"
         :disable-transitions="false"
-        :effect="item.entity.name===$route.name?'dark':'plain'"
-        @click="toPath(item.entity.name)"
+        :effect="item.name===$route.name?'dark':'plain'"
+        @click="toPath(item.name)"
         @close="handleClose(item)">
-        {{item.entity.alias}}
+        {{item.alias}}
         </el-tag>
     </div>
 </template>
@@ -31,14 +31,14 @@ export default {
     })
     },
     handleClose(delTagItem){
-    var tabFindIndex =  this.$store.state.tabArray.findIndex(item=>item.entity.id===delTagItem.entity.id)
+    var tabFindIndex =  this.$store.state.tabArray.findIndex(item=>item.id===delTagItem.id)
     var length = this.$store.state.tabArray.length
     this.$store.commit('del',tabFindIndex)
-    if(delTagItem.entity.name!==this.$route.name) return
+    if(delTagItem.name!==this.$route.name) return
     if(length-1===tabFindIndex){
-    this.toPath(this.$store.state.tabArray[tabFindIndex-1].entity.name)
+    this.toPath(this.$store.state.tabArray[tabFindIndex-1].name)
     }else{
-    this.toPath(this.$store.state.tabArray[tabFindIndex].entity.name)
+    this.toPath(this.$store.state.tabArray[tabFindIndex].name)
     }
     }
     }
@@ -47,8 +47,7 @@ export default {
 <style lang="scss" scoped>
  #tabBox{
      width:100%;
-     height: 5%;
-    //  border: 1px solid red;
+     height: 45.44px;
     .el-tag{
         cursor: pointer;
     }

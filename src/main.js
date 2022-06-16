@@ -5,18 +5,9 @@ import store from './store'
 import axios from "./plugins/axios"
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import iView from 'iview';
-import 'iview/dist/styles/iview.css';
-import base_64 from "./plugins/base64"
-import * as echarts from 'echarts'
-import VabChart from 'vue-echarts';
-Vue.prototype.$echarts = echarts
+import 'lib-flexible'
 Vue.use(ElementUI)
-Vue.use(base_64)
-Vue.use(iView);
 Vue.prototype.$axios = axios
-Vue.component('VabChart', VabChart);
-
 Vue.config.productionTip = true
 
 

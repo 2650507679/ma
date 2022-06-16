@@ -7,12 +7,10 @@ export default new Vuex.Store({
   state: {
     tabArray:[
       {
-      entity: {
         id: 0,
         name: "aa",
         icon: "el-icon-message",
         alias: "首页"
-      }
       }
     ]
   },
