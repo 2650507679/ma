@@ -76,6 +76,7 @@ export default {
     .el-aside {
       background-color: #545C64;
       text-align: center;
+      overflow: hidden;
       .el-menu{
         width: 100%;
       }
