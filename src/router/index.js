@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import layout from '@/Layout/index.vue'
-import detail from '@/views/detail.vue'
-import page1 from '@/views/page1.vue'
-import page2 from '@/views/page2.vue'
+import detail from '@/views/detail/detail.vue'
+import page1 from '@/views/page1/page1.vue'
+import page2 from '@/views/page2/page2.vue'
+import demo from '@/views/demo/demo.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -33,6 +34,11 @@ const routes = [
       component:page2
     }
     ]
+  },
+  {
+    name:'demo',
+    path:'/demo',
+    component:demo
   }
 ]
 
